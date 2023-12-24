@@ -1,0 +1,68 @@
+        .iconfont {
+            color: gray;
+            font-size: 50px;
+            text-decoration: none;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+         /*    overflow: hidden; */
+        }
+
+        nav li a {
+            display: block;
+            padding-bottom: 0px;
+            text-decoration: none;
+        }
+
+        h5 {
+            font-size: 14px;
+            padding-top: 0px;
+     /*        margin-top: -5px; */
+            text-align: center;
+            color: gray;
+           /*  margin-bottom: 10px; */
+        }
+        .nav svg {
+            font-size: 40px;
+            margin: 3px 0;
+        }
+        body {
+            background-color: #fff;
+            margin-bottom: 50px;
+            padding: 0;
+            margin: 0;
+        }
+        nav>ul{
+            display: flex;
+        }
+        nav li{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        nav div{
+            position: relative;
+        } 
+    ul{
+        list-style: none;/* 去点 */
+    }
+    nav{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 9;
+        background-color: #fff;/* 必须有要不就透明了，没有设为#fff */
+    }

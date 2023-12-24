@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>21001010315李炤彤 央视新闻</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/下导航.css">
+    <link rel="stylesheet" href="./css/搜索框.css">
+    <style>
+
+        body{
+           margin: 0;
+           padding: 0;
+       }
+       img{
+           width: 100%;
+       }
+       .mySwiper{
+           overflow: hidden;
+       }
+
+    </style>
+</head>
+<body>
+    <!-- 李炤彤的代码示例 -->
+    <header id="header"><!-- 中间是# -->
+        <div class="search">
+            <span class="iconfont icon-fangdajing"></span>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">每天认识一件文物</div>
+                    <div class="swiper-slide">长三角一体化发展</div>
+                    <div class="swiper-slide">他们才是我们该追的“星”</div>
+                    <div class="swiper-slide">大范围雨雪+寒潮即将上线</div>
+                    <div class="swiper-slide">美国媒体人为何网络“互撕”</div>
+                </div> 
+             </div>
+             <span class="iconfont icon-luyin"></span>
+        </div>
+        <span class="iconfont icon-luyinjishouyinjidiantai"></span>
+        <span class="iconfont icon-tv"></span>
+    </header>
+<!--     <nav id="snav"></nav>
+    <main></main>
+    <aside></aside>
+    <section id="ad"></section> -->
+
+
+       <div class="swiper mySwiper2">
+           <div class="swiper-wrapper">
+             <div class="swiper-slide"><img src="./images/0.jpg"/></div>
+             <div class="swiper-slide"><img src="./images/1.png"/></div>
+             <div class="swiper-slide"><img src="./images/2.jpg"/></div>
+             <div class="swiper-slide"><img src="./images/3.jpg"/></div>
+           </div>
+           <div class="swiper-pagination"></div>
+         </div>
+
+        
+
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="iconfont icon-cctv-headquarters">
+                            <h5 class="sy">首页</h5>
+                        </span></a></li>
+                <li><a href="24hours.html"><span class="iconfont icon-icon-">
+                            <h5>24小时</h5>
+                        </span></a></li>
+                <li><a href="zhongyang.html"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yss"></use>
+                </svg></a></li>
+                <li><a href="yangshihao.html"><span class="iconfont icon-lua">
+                        </span>
+                        <h5>央视号</h5>
+                    </a></li>
+                <li><a href="user.html"><span class="iconfont icon-geren">
+                        </span>
+                        <h5>我的</h5>
+                    </a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <script src="./fonts/iconfont.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper2", {
+          autoplay: {
+              delay: 1000,
+              disableOnInteraction: false,
+            },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+</body>
+</html>

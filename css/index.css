@@ -1,0 +1,32 @@
+#mainfind {
+    background-color: blue;
+}
+.search_input input[type='text'] {
+    display: inline-block;
+    width: 65%;
+    border-radius: 15px;
+    height: 30px;
+    text-indent: 30px;
+    border: 1px;
+    margin-left: 13.5%;
+}
+.search_input input[type='text']:focus {
+    border: 15px;
+    border-color: red;
+}
+.search_input {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.search_input i {
+    position: relative;
+    left: 20%;
+    font-size: 20px;
+    color: #B2B2B2;
+    float: left;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+.wrap {
+    float: left;
+}

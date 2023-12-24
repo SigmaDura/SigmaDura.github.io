@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24小时</title>
+	<link rel="stylesheet" href="./fonts/iconfont.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/下导航.css">
+	<style>
+		.hotlist{
+			background-color: rgb(0, 47, 197);
+		}
+		#fangdajing{
+			margin-top: 0;
+			line-height: 100px;
+			float: none;
+			margin-left: 390px;
+			color: #fff;
+		}
+		ul{list-style:none;}
+        ul,h2,p{padding:0;margin:0;}
+        img{border:none;display:block;}
+        a{text-decoration:none;color: #000;}
+        .mlist>li{
+            height: 65px;
+            border-bottom:14px solid #ccc;
+            margin-bottom:40px;
+            position: relative;
+			margin-top: 15px;
+        }
+        .mlist img{
+            width:100px;
+            height:60px;
+            float:left;
+            margin-right:8px;
+            margin-left:5px;
+        }
+        .mlist h2{
+            line-height:32px;
+            font-size:16px;
+        }
+        .time{
+            position: absolute;
+            left: 10px;
+            bottom:70px;
+            font-size:12px;
+            color:#000;
+        }
+	</style>
+</head>
+<body>
+    <header id="header">
+        <div class="hotlist">
+            <img src="./images/12.png" style="float: left" height="100px">
+            <a href="./hotlist.html"><span class="iconfont icon-fangdajing" id="fangdajing"></span></a>
+    </header>
+
+
+	<footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="iconfont icon-cctv-headquarters">
+                            <h5 class="sy">首页</h5>
+                        </span></a></li>
+                <li><a href="24hours.html"><span class="iconfont icon-icon-">
+                            <h5>24小时</h5>
+                        </span></a></li>
+                <li><a href="zhongyang.html"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yss"></use>
+                </svg></a></li>
+                <li><a href="yangshihao.html"><span class="iconfont icon-lua">
+                        </span>
+                        <h5>央视号</h5>
+                    </a></li>
+                <li><a href="user.html"><span class="iconfont icon-geren">
+                        </span>
+                        <h5>我的</h5>
+                    </a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <body>
+        <form>
+            <label for="date">选择日期：</label>
+            <input type="date" id="date" onchange="showDate()">
+        </form>
+        <p id="selectedDate"></p>
+
+        <ul class='mlist'>	
+			<!-- 空的列表 -->
+		</ul>
+    </body>
+
+
+
+	
+    <script>
+		var data=[
+		{
+		 "img":"./images/13.png",
+		 "h2":"渝湘高铁重黔段首座万米长隧桂花园隧道顺利贯通",
+		 "link":"https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=9677351872964592875&toc_style_id=feeds_default&share_to=copy_url&track_id=f7367426-d4c7-426e-9d85-086a111858f1",
+		 "time":"13:28"	
+		},
+		{
+		 "img":"./images/14.png",
+		 "h2":"习近平会见欧洲理事会主席米歇尔和欧盟委员会主席冯德莱恩",
+		 "link":"https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=10096219001371237808&toc_style_id=feeds_default&share_to=copy_url&track_id=4eae28d9-ae7f-4bd0-9cc9-ffc3c9d1fa8c",
+		 "time":"13:28"	
+		},
+		{
+		 "img":"./images/15.png",
+		 "h2":"10万立方米存冰！冰雪大世界提前开工的秘密原来在这→",
+		 "link":"https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=2288757111582080969&toc_style_id=feeds_default&share_to=copy_url&track_id=1c80ca76-8fa1-4c1b-9a56-50cf0d07e2eb",
+		 "time":"13:18"	
+		},
+		{
+		 "img":"./images/16.png",
+		 "h2":"以军炮击加沙地带中部难民营造成人员死亡",
+		 "link":"https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=465905743765513114&toc_style_id=feeds_default&share_to=copy_url&track_id=1992dbfb-f511-4d1e-b791-b567edb767d5",
+		 "time":"13:11"	
+		},{
+		 "img":"./images/17.png",
+		 "h2":"气旋风暴“米昌”已致印度多地至少27人死亡",
+		 "link":"https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=948865476868148814&toc_style_id=feeds_default&share_to=copy_url&track_id=7481569b-27ff-443f-843b-4139e0e13f28",
+		 "time":"13:04"	
+		}
+		];
+			//json
+			var mlist=document.querySelector(".mlist");
+			//dom，找到mlist
+			for(var i=0;i<data.length;i++){
+			  var newli=document.createElement("li");
+			  //创建li元素
+			  var row=`<img src="${data[i].img}">
+						<h2><a href="${data[i].link}">${data[i].h2}</a></h2>
+						<span class="time">${data[i].time}</span>`;
+						//这里使用的时es6的反引号，建议先写好HTML和CSS，测试完毕，再构建动态字符串
+			  newli.innerHTML=row;
+			  mlist.appendChild(newli);
+			  //在mlist的内部的最后增加元素
+			}
+		</script>
+
+
+    <script>
+        function showDate() {
+            var dateInput = document.getElementById("date");
+            var selectedDate = dateInput.value;
+            document.getElementById("selectedDate").innerHTML = "您选择的日期是：" + selectedDate;
+        }
+    </script>
+	<script src="./fonts/iconfont.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>央视号</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/下导航.css">
+    <style>
+        .title{
+            background-color: rgb(0, 47, 197);
+            color: #fff;
+            height: 100px;
+        }
+        #fangdajing {
+            margin-top: 0;
+            line-height: 100px;
+            float: none;
+            margin-left: 568px;
+            color: #fff;
+        }
+        .content {
+            display: flex;
+        }
+        .left, .cen, .right {
+            display: flex;
+            align-items: center;
+        }
+        .left img {
+            margin-right: 10px;
+        }
+        .cen p {
+            margin-right: 10px;
+            font-size: 30px;
+        }
+        #guanzhu{
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header id="yangshifind">
+        <div class="title">
+            <span>热门</span>
+            <span>关注</span>
+            <a href="./hotlist.html"><span class="iconfont icon-fangdajing" id="fangdajing"></span></a>
+        </div>   
+    </header>
+
+    <div class="Tranbom_list">
+        <div class="content">
+            <div class="left">
+                <img src="./images/20.png" alt="">
+            </div>
+            <div class="cen">
+                <p >总台山东总台</p>
+            </div>
+            <div class="right">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-16" id="guanzhu"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="boxIcon">
+            <div class="cenTit">
+                山东泰安：非遗花边伞撑开创业致富路
+            </div>
+            <div class="topImg">
+                <img src="./images/19.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="iconfont icon-cctv-headquarters">
+                            <h5 class="sy">首页</h5>
+                        </span></a></li>
+                <li><a href="24hours.html"><span class="iconfont icon-icon-">
+                            <h5>24小时</h5>
+                        </span></a></li>
+                <li><a href="zhongyang.html"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yss"></use>
+                </svg></a></li>
+                <li><a href="yangshihao.html"><span class="iconfont icon-lua">
+                        </span>
+                        <h5>央视号</h5>
+                    </a></li>
+                <li><a href="user.html"><span class="iconfont icon-geren">
+                        </span>
+                        <h5>我的</h5>
+                    </a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="./fonts/iconfont.js"></script>
+    <script>
+        var data = {
+            "image": {
+            "url": "https://example.com/image.jpg",
+            "caption": "这是一张示例图片"
+            }
+        };
+        // 获取图片链接和标题
+        var imageUrl = data.image.url;
+        var imageCaption = data.image.caption;
+
+        // 在控制台输出图片链接和标题
+        console.log("图片链接： " + imageUrl);
+        console.log("图片标题： " + imageCaption);
+    </script>
+
+
+</body>
+</html>
