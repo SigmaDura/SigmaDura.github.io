@@ -1,0 +1,75 @@
+h1,h2,h3,h4,h5,h6,body,p,ul,form,dl,dd,dt{
+    padding: 0;
+    margin: 0;
+}
+ul,li{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:visited{
+    color: #000;
+}
+img{
+    border: none;
+}
+/* 李炤彤的移动端css */
+.icon{
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.25em;
+    fill: currentColor;
+    font-size: 50px;
+}
+nav{
+    position: fixed;
+    justify-content: space-around;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: #fff;/* 必须有要不就透明了，没有设为#fff */
+}
+nav div{
+      position: relative;
+}
+.bnav svg{
+    font-size: 40px;
+    margin: 3px 0;
+}
+nav span{
+    font-size: 14px;
+    line-height: 34px;
+    color: #333;
+    text-align: center;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.num{
+    width: 30px;
+    height: 18px;
+    border-radius: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+body{
+    min-width:320px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+:root{
+    font-size: 5.6vw;
+    /* rem */
+}

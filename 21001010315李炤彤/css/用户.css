@@ -1,0 +1,96 @@
+.contain {
+    padding: 5.2rem 0.3rem 0;
+    background-color: rgb(0, 47, 197);
+  }
+  .contain .header {
+    width: calc(100% - 0.3rem);
+    background-color: #fff;
+    padding: 0.15rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .contain .header .top {
+    width: 100%;
+    padding: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  .contain .header .top i {
+    margin-left: 0.32rem;
+    font-size: 0.5rem;
+  }
+  .contain .header .headImg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .contain .header .headImg img {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    margin-right: 0.2rem;
+  }
+
+  .contain .header .jifen {
+    width: calc(100% - 0.6rem);
+    padding: 0.2rem 0.3rem;
+    display: flex;
+    align-items: center;
+    background-color: #fcecef;
+    border-radius: 0.2rem;
+    color: #fb6b9e;
+    font-size: 0.218rem;
+  }
+  .contain .header .jifen img {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.2rem;
+  }
+  .contain .header .jifen .huoqu {
+    margin-right: auto;
+  }
+  .contain .header .jifen .huoqu p {
+    font-size: 0.24rem;
+    margin-bottom: 0.1rem;
+    font-weight: bold;
+  }
+  .contain .header .jifen .rightArrow {
+    width: 0.16rem;
+    height: 0.16rem;
+    border-top: 0.03rem solid #fb6b9e;
+    border-right: 0.03rem solid #fb6b9e;
+    position: relative;
+    top: 0.03rem;
+  }
+  .contain h3 {
+    font-size: 0.28rem;
+    margin: 0.3rem 0;
+  }
+
+  .contain .moreServe div {
+    display: flex;
+    align-items: center;
+    font-size: 0.24rem;
+    margin-bottom: 0.2rem;
+    height: 0.6rem;
+  }
+  .contain .moreServe div img {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.3rem;
+  }
+  .contain .moreServe div p {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 750px) {
+    .contain {
+      padding: 0rem 0.3rem 0;
+    }
+    .contain .header {
+      position: relative;
+    }
+  }
+  

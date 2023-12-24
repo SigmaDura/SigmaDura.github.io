@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>央视新闻</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/下导航.css">
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+  
+      body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+  
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+  
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .swiper {
+        width: 440px;
+        height: 440px;
+      }
+  
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 18px;
+        color: #fff;
+      }
+
+      .swiper-slide:nth-child(1n) {
+        background-color: rgb(255, 255, 255);
+      }
+  
+      .swiper-slide:nth-child(2n) {
+        background-color: rgb(255, 255, 255);
+      }
+  
+      .swiper-slide:nth-child(3n) {
+        background-color: rgb(255, 255, 255);
+      }
+  
+      .swiper-slide:nth-child(4n) {
+        background-color: rgb(255, 255, 255);
+      }
+  
+      .swiper-slide:nth-child(5n) {
+        background-color: rgb(255, 255, 255);
+      }
+  
+      .swiper-slide:nth-child(6n) {
+        background-color: rgb(255, 255, 255);
+      }
+  
+      .swiper-slide:nth-child(7n) {
+        background-color: rgb(255, 255, 255);
+      }
+  
+      .swiper-slide:nth-child(8n) {
+        background-color: rgb(255, 255, 255);
+      }
+      .swiper-slide:nth-child(9n) {
+        background-color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- Swiper -->
+  
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="#"><img src="./images/4.png"><p>对这件事关大局的大事，最新要求来了</p></a></div>
+        <div class="swiper-slide"><a href="#"><img src="./images/5.png"><p>从今天起，做一个能量充沛的人</p></a></div>
+        <div class="swiper-slide"><a href="#"><img src="./images/6.png"><p>就是这种陌生又熟悉的感觉 带你河内一日Citywalk</p></a></div>
+        <div class="swiper-slide"><a href="#"><img src="./images/7.png"><p>习主席举行多场双边会见 画出亚太合作“同心圆”</p></a></div>
+        <div class="swiper-slide"><a href="#"><img src="./images/8.png"><p>“牛皮藓”会传染吗？</p></a></div>
+        <div class="swiper-slide"><a href="#"><img src="./images/9.png"><p>健身干货：运动后如何避免过度拉伸？</p></a></div>
+        <div class="swiper-slide"><a href="#"><img src="./images/10.png"><p>这些台风防范措施一定要看！</p></a></div>
+        <div class="swiper-slide"><a href="#"><img src="./images/11.png"><p>农业频道谈谈激光炮</p></a></div>
+      </div>
+    </div>
+
+    <ul class="alist">
+      <!-- <li>
+       <img src="pname">
+       <p>内容</p>
+     </li> -->
+   </ul>
+  
+
+
+
+
+  
+   <footer>
+    <nav>
+        <ul>
+            <li><a href="index.html"><span class="iconfont icon-cctv-headquarters">
+                        <h5 class="sy">首页</h5>
+                    </span></a></li>
+            <li><a href="24hours.html"><span class="iconfont icon-icon-">
+                        <h5>24小时</h5>
+                    </span></a></li>
+            <li><a href="zhongyang.html"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-yss"></use>
+            </svg></a></li>
+            <li><a href="yangshihao.html"><span class="iconfont icon-lua">
+                    </span>
+                    <h5>央视号</h5>
+                </a></li>
+            <li><a href="user.html"><span class="iconfont icon-geren">
+                    </span>
+                    <h5>我的</h5>
+                </a></li>
+        </ul>
+    </nav>
+</footer>
+
+
+<script src="./fonts/iconfont.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="./js/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+      });
+    </script>
+
+<script>
+  var url = "http://rap2api.taobao.org/app/mock/315699/lizhaotong2";
+  // AJAX基本框架，固定
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.send();
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+         console.log(xhr.responseText); 
+          //数据逻辑处理  
+          parse(xhr.responseText);
+      }
+  }
+
+  function parse(rs){
+      var jarr=JSON.parse(rs);
+      var list=document.querySelector(".swiper-wrapper");
+      for(let v of jarr){
+          let li=document.createElement("li");
+          li.innerHTML=`
+          <img src="${v.pic}">
+          <a href="${data[i].link}"></a>
+          <p>${v.content}</p>`;
+          list.appendChild(li);
+      }
+  }
+</script>
+  </body>
+</html>
